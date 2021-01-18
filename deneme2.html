@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+	Enter the first name:
+	<input type="text" name="fname" id="fname">
+
+	Enter the last surname:
+	<input type="text" name="surname" id="surname">
+
+	Enter age:
+	<input type="number" name="age" id="age">
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+

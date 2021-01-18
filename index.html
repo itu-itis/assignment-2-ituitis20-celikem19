@@ -240,16 +240,20 @@
 				var subjectNode = document.createTextNode(subject.value);
 				subjectTd.appendChild(subjectNode);
 				newRow.appendChild(subjectTd);
+				document.getElementById(subjectId).value="";
 				
 				var teacherTd = document.createElement("TD");
 				var teacherNode = document.createTextNode(teacher.value);
 				teacherTd.appendChild(teacherNode);
 				newRow.appendChild(teacherTd);
+				document.getElementById(teacherId).value="";
+				
 				
 				var clusterTd = document.createElement("TD");
 				var clusterNode = document.createTextNode(cluster.value);
 				clusterTd.appendChild(clusterNode);
-				newRow.appendChild(clusterTd)	
+				newRow.appendChild(clusterTd);
+				document.getElementById(clusterId).value="";	
 			}
 			function myFunction4(sportId, teamId) {
 				var sport = document.getElementById(sportId);
@@ -265,13 +269,16 @@
 				var sportNode = document.createTextNode(sport.value);
 				sportTd.appendChild(sportNode);
 				newRow.appendChild(sportTd);
+				document.getElementById(sportId).value="";
 				
 				var teamTd = document.createElement("TD");
 				var teamNode = document.createTextNode(team.value);
 				teamTd.appendChild(teamNode);
 				newRow.appendChild(teamTd);
+				document.getElementById(teamId).value="";
 				
 			}
+			
 			</script>
 			<h6 class="last">©  2023 Alaşehir Bahçeşehir College<br>
 				©  All Rights Reserved.<br>

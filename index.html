@@ -8,7 +8,9 @@
 
 .tab div:target {
   display: block;
+
 }
+
 </style>
 	<meta charset="utf-8" />
 	<title>ALAŞEHİR BAHÇEŞEHİR KOLEJİ</title>
@@ -129,6 +131,124 @@
 			<span class="logo2">
 				<img src="bklogo.png" alt="logo">
 			</span>
+			<table id="myTable" border=1>
+			  <tr>
+				<th>Subject</th>
+				<th>Teacher Name</th>
+				<th>Cluster</th>
+			  </tr>
+			  <tr>
+				<td>Math</td>
+				<td>Emre Çelik</td>
+				<td>Anaheim</td>
+				
+			  </tr>
+			  <tr>
+				<td>Math</td>
+				<td>Raziye Çelik</td>
+				<td>Gotham</td>
+				
+			  </tr>
+			  <tr>
+				<td>Math</td>
+				<td>İlker Açıksarı</td>
+				<td>Paradise</td>
+			   
+			  </tr>
+			  <tr>
+				<td>Math</td>
+				<td>Duck</td>
+				<td>Mallard</td>
+			  
+			  </tr>
+			  <tr>
+				<td>Bugs</td>
+				<td>Bunny</td>
+				<td>Rascal</td>
+			   
+			  </tr>
+			</table>
+
+			<button onclick="myFunction1()">Teacher</button>
+			<button onclick="myFunction2()">Team</button>
+
+			<div id="myDIV" class="birinci">
+				Subject:
+				<input type="text" name="subject" id="subject">
+
+				Teacher Name:
+				<input type="text" name="teacher" id="teacher">
+
+				Cluster:
+				<select name="cluster" id="cluster">
+					<option value="SAY">SAY</option>
+					<option value="EA">EA</option>
+					<option value="DIL">DIL</option>
+				</select>
+				<button onclick="myFunction3('subject', 'teacher', 'cluster')">Add</button>
+			</div>
+			<div id="myDIV2" class="ikinci">
+				Sports Type:
+				<select name="fname" id="fname">
+					<option value="Basketball">Basketball</option>
+					<option value="Footbal">Footbal</option>
+					<option value="Volleyball">Volleyball</option>
+				</select>
+				Team Name:
+				<input type="text" name="surname" id="surname">
+				<button onclick="myFunction4()">Add</button>
+			</div>
+
+
+			<script>
+			function myFunction1() {
+				var x = document.getElementById("myDIV");
+				var y = document.getElementById("myDIV2");
+				x.style.display = "block";
+				y.style.display = "none";
+			}
+			function myFunction2() {
+				var x = document.getElementById("myDIV");
+				var y = document.getElementById("myDIV2");
+				y.style.display = "block";
+				x.style.display = "none";
+			}
+			function myFunction3(subjectId, teacherId, clusterId) {
+				var subject = document.getElementById(subjectId);
+				var teacher = document.getElementById(teacherId);
+				var cluster = document.getElementById(clusterId);
+				
+				
+				var myTable = document.getElementById("myTable");
+				
+				var newRow = document.createElement("TR");
+				newRow.setAttribute("id", "myRow");
+				myTable.appendChild(newRow);
+				
+				var subjectTd = document.createElement("TD");
+				var subjectNode = document.createTextNode(subject.value);
+				subjectTd.appendChild(subjectNode);
+				newRow.appendChild(subjectTd);
+				
+				var teacherTd = document.createElement("TD");
+				var teacherNode = document.createTextNode(teacher.value);
+				teacherTd.appendChild(teacherNode);
+				newRow.appendChild(teacherTd);
+				
+				var clusterTd = document.createElement("TD");
+				var clusterNode = document.createTextNode(cluster.value);
+				clusterTd.appendChild(clusterNode);
+				newRow.appendChild(clusterTd);
+				
+				
+				
+			}
+			</script>
+			<h6 class="last">©  2023 Alaşehir Bahçeşehir College<br>
+				©  All Rights Reserved.<br>
+				©  This Site is not Real.
+		  
+			</h6>
 		</div>
 
 		<div id="gallery">
